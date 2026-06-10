@@ -1,34 +1,34 @@
 #pragma once
-// Êı¾İ¿âÅäÖÃĞÅÏ¢
+// æ•°æ®åº“é…ç½®ä¿¡æ¯
 #include <mysql/mysql.h>
 #include <string>
 
 using namespace std;
 static string server = "127.0.0.1";
 static string user = "root";
-static string password = "@Tdq111111";
-static string dbname = "chat";
+static string password = "Your MySql password";
+static string dbname = "Your dbname";
 
-// Êı¾İ¿â²Ù×÷Àà
+// æ•°æ®åº“æ“ä½œç±»
 class MySQL
 {
 public:
-    // ³õÊ¼»¯Êı¾İ¿âÁ¬½Ó
+    // åˆå§‹åŒ–æ•°æ®åº“è¿æ¥
     MySQL();
 
-    // ÊÍ·ÅÊı¾İ¿âÁ¬½Ó×ÊÔ´
+    // é‡Šæ”¾æ•°æ®åº“è¿æ¥èµ„æº
     ~MySQL();
 
-    // Á¬½ÓÊı¾İ¿â
+    // è¿æ¥æ•°æ®åº“
     bool connect();
 
-    // ¸üĞÂ²Ù×÷
+    // æ›´æ–°æ“ä½œ
     bool update(string sql);
 
-    //»ñÈ¡Á¬½Ó
+    //è·å–è¿æ¥
     MYSQL* getConnection();
 
-    // ²éÑ¯²Ù×÷
+    // æŸ¥è¯¢æ“ä½œ
     MYSQL_RES* query(string sql);
 private:
     MYSQL* _conn;
